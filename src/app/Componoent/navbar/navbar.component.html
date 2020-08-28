@@ -1,0 +1,96 @@
+<nav class="navbar navbar-expand-lg" [ngClass]="{'bg-app-primary': navViewPort == false}">
+    <a class="navbar-brand py-0" >
+        <img src="../../../assets/img/logo-green.svg" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="menu()">
+        <i class="fas fa-bars text-app-primary"></i>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mid_list">
+            <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['']" routerLinkActive="router_active" 
+            [routerLinkActiveOptions]="{exact: true}">Home </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/about-us']" routerLinkActive="router_active" 
+            [routerLinkActiveOptions]="{exact: true}">About</a>
+            </li>
+            <li class="nav-item programs">
+                <a class="nav-link" [ngClass]="{'router_active': route == true}">Programs
+                    <img class="ml-2 c_p" src="../../../assets/img/caret.svg" (click)="toggleDrpdown()">
+                </a>
+                <div class="program_dropdown" *ngIf="dropdown">
+                    <div class="item">
+                        <span [routerLink]="['/programs/mentorship']" 
+                        routerLinkActive="router_active">Mentorship</span>
+                    </div>
+                    <div class="item">
+                        <span [routerLink]="['/programs/intenship']" 
+                        routerLinkActive="router_active">Mentorship</span>
+                    </div>
+                    <div class="item">
+                        <span [routerLink]="['/programs/open-talk']" 
+                        routerLinkActive="router_active">Open Talk</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item">
+                <a class="nav-link mr-4 text-white" [routerLink]="['/contact-us']" routerLinkActive="router_active" 
+                [routerLinkActiveOptions]="{exact: true}">Contact</a>
+            </li>
+            <li class="nav-item">
+                <button class="button f-16 join bg-app-teal">Join Community</button>
+            </li>
+        </ul>
+    </div>
+  </nav>
+  <div class="mobile-menu bg-app-light slide_menu" id="menu">
+      <span>
+        <!-- <i class="icofont-close c_p" (click)="menu()"></i> -->
+          <i class="fa fa-times close c_p" (click)="menu()"></i>
+      </span>
+      <div class="company_logo mt-3">
+        <img src="../../../assets/img/favicon.svg" alt="">
+      </div>
+      <ul>
+        <li class="side_link active">
+            <a class="nav-link" [routerLink]="['/']" routerLinkActive="router_active" 
+            [routerLinkActiveOptions]="{exact: true}">Home </a>
+          </li>
+          <li class="side_link">
+              <a class="nav-link"[routerLink]="['/about']" routerLinkActive="router_active" 
+              [routerLinkActiveOptions]="{exact: true}">About Us</a>
+          </li>
+          <li class="side_link">
+            <a class="nav-link" [ngClass]="{'router_active': route == true}">Programs</a>
+            <ul class="list-unstyled">
+                <li class="side_link">
+                    <a class="nav-link"[routerLink]="['/programs/mentorship']" 
+                    routerLinkActive="router_active" 
+                    [routerLinkActiveOptions]="{exact: true}">Mentorship</a>
+                </li>
+                <li class="side_link">
+                    <a class="nav-link"[routerLink]="['/programs/intenship']" 
+                    routerLinkActive="router_active" 
+                    [routerLinkActiveOptions]="{exact: true}">Intenship</a>
+                </li>
+                <li class="side_link">
+                    <a class="nav-link"[routerLink]="['/programs/open-talk']" 
+                    routerLinkActive="router_active" 
+                    [routerLinkActiveOptions]="{exact: true}">Open Talk</a>
+                </li>
+            </ul>
+          </li>
+          <li class="side_link">
+            <a class="nav-link" [routerLink]="['/contact-us']" routerLinkActive="router_active" 
+            [routerLinkActiveOptions]="{exact: true}">Contact</a>
+          </li>
+          <li class="side_link">
+              <button class="nav-link bg-app-teal join w-100">Join Community</button>
+          </li>
+      </ul>
+      
+  </div>
