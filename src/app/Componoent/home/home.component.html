@@ -117,7 +117,7 @@
             <span class="text-app-teal">Takeaways</span>
         </h6>
     </div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item" 
                 *ngFor="let testi of formattedItems; let i = index"
@@ -130,10 +130,9 @@
                 </div>
             </div>
         </div>
-        <ol class="carousel-indicators testimony_counter">
-            <li data-target="#carouselExampleIndicators" 
-            *ngFor="let item of formattedItems; let i = index"
-            data-slide-to="{{i}}" [ngClass]="{'active_item': i == 0}"></li>
-        </ol>
+    </div>
+    <div class="testimony_counter">
+        <span *ngFor="let item of formattedItems; let i = index"
+        (click)="moveCarousel(i)" [ngClass]="{'active_item': i == activeItem}"></span>
     </div>
 </div>

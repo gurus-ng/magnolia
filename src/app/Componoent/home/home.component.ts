@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $:any;
 
 @Component({
   selector: 'app-home',
@@ -27,9 +28,16 @@ export class HomeComponent implements OnInit {
     },
   ]
   formattedItems = [];
+  activeItem = 0;
   constructor() { }
 
   ngOnInit(): void {
+    $('#carousel').carousel({
+      interval: 5000
+    })
+    if ($('#carousel').carousel(1).hasClass('active')) {
+      alert("this is an alert");
+  }
     let size = 2;
     this.formattedItems = new Array(Math.ceil(this.testimonials.length / size)).fill("")
     .map(function() { 
@@ -38,5 +46,9 @@ export class HomeComponent implements OnInit {
   }
   collapseDropdown(){
     
+  }
+  moveCarousel(i){
+    this.activeItem = i;
+    $('#carousel').carousel(i);
   }
 }
