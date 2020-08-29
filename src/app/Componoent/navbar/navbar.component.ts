@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { HostListener, Inject } from "@angular/core";
+import { Router } from '@angular/router';
 declare const window: any;
 
 @Component({
@@ -11,9 +12,13 @@ declare const window: any;
 export class NavbarComponent implements OnInit {
   navViewPort = true;
   dropdown = false;
-  route  = false
-  constructor() { }
+  route = false;
+  url = '';
+  constructor(
+    private router: Router
+  ) { }
   ngOnInit(): void {
+    this.url = this.router.url;
   }
   @HostListener("window:scroll", [])
   onWindowScroll() {

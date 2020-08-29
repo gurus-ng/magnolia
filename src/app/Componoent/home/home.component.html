@@ -1,17 +1,15 @@
-<div class="_nav">
-    <app-navbar></app-navbar>
-</div>
-<div class="banner">
+<app-navbar></app-navbar>
+<div class="banner" (click)="collapseDropdown()">
     <div class="wrapper d-flex">
         <div class="content">
-            <h6 class="title-text text-app-black">Inspiring the growth inside of you</h6>
-            <p class="text-ap-grey f-16">
+            <h6 class="title-text text-app-black mb-4">Inspiring the growth inside of you</h6>
+            <p class="text-ap-grey f-16 mb-4">
                 We are a community that exists to inspire growth and make the path to 
                 finding one’s self as a young adult easier by providing the necessary 
                 resources such as mentorships mental health workshops and internships. 
             </p>
             <div class="join_group">
-                <div>
+                <div class="btn_group">
                     <img src="../../../assets/img/email-84.svg" alt="">
                     <input type="text" class="text-app-grey" placeholder="Email address">
                 </div>
@@ -21,5 +19,121 @@
         <div class="banner_bg pr-0">
             <img src="../../../assets/img/banner-image.png" class="img-fluid" alt="">
         </div>
+    </div>
+</div>
+<div class="programs section_content">
+    <div class="row px-2">
+        <div class="col-md-4">
+            <img src="../../../assets/img/mentorship-icon.svg" alt="" class="icon">
+            <h6 class="f-18 f-wb text-app-black">Magnolia
+                <span class="text-app-teal">Mentorship</span>
+            </h6>
+            <p class="text-app-grey f-14 mb-3">
+                Providing career and educational guidance.
+                Helping encourage self development, self growth and self achievements.
+            </p>
+            <a class="more text-app-grey" [routerLink]="['/programs/mentorship']">Learn More</a>
+        </div>
+        <div class="col-md-4">
+            <img src="../../../assets/img/intenship-icon.svg" alt="" class="icon">
+            <h6 class="f-18 f-wb text-app-black">Magnolia
+                <span class="text-app-green">Intenship</span>
+            </h6>
+            <p class="text-app-grey f-14 mb-3">
+                Helping students make a keen decision concerning their career path. 
+                We seek to boost student confidence.
+            </p>
+            <a class="more text-app-grey" [routerLink]="['/programs/intenship']">Learn More</a>
+        </div>
+        <div class="col-md-4">
+            <img src="../../../assets/img/open-talk-icon.svg" alt="" class="icon">
+            <h6 class="f-18 f-wb text-app-black">Open Talk Sessions
+            </h6>
+            <p class="text-app-grey f-14 mb-3">
+                Annual events held with the professionals
+                to discuss an aspect of depression and have open 
+                discussions with the participants in attendance.
+            </p>
+            <a class="more text-app-grey" [routerLink]="['/programs/open-talk']">Learn More</a>
+        </div>
+    </div>
+</div>
+<div class="achievements section_content">
+    <div class="title text-center">
+        <h6 class="text-app-black title-text">Our <span class="text-app-teal">Achievements</span></h6>
+        <p class="text-app-black f-18">We have grown since 2018 and plan a bigger expansion <br>
+            projects, take a look at what we have achieved so far 
+        </p>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <img src="../../../assets/img/blog-1-home.svg" alt="" class="blog_img img-fluid">
+            <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
+        </div>
+        <div class="col-md-4">
+            <img src="../../../assets/img/blog-2-home.svg" alt="" class="blog_img img-fluid">
+            <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
+        </div>
+        <div class="col-md-4">
+            <img src="../../../assets/img/blog-3-home.svg" alt="" class="blog_img img-fluid">
+            <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="../../../assets/img/blog-4-home.svg" alt="" class="blog_img img-fluid">
+            <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
+        </div>
+        <div class="col-md-4">
+            <img src="../../../assets/img/blog-5-home.png" alt="" class="blog_img img-fluid">
+            <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
+        </div>
+        <div class="col-md-4">
+            <img src="../../../assets/img/blog-6-home.svg" alt="" class="blog_img img-fluid">
+            <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
+        </div>
+    </div>
+</div>
+<div class="session section_content">
+    <div class="title">
+        <h6 class="head-text text-app-black">
+            <span class="pr-4">Watch a clip from a</span>  
+            <span class="text-app-teal">session.</span>
+        </h6>
+        <p class="clip_desc">
+            Our latest event was held in January 2020 and this focused on depression once again.
+            The theme for the event was Depression among students. It was a success!
+        </p>
+    </div>
+    <div class="clip">
+        <img src="../../../assets/img/video-layout.png" class="img-fluid clip_bg" alt="">
+        <img src="../../../assets/img/Play.svg" alt="" class="play_btn">
+    </div>
+</div>
+<div class="testimonial section_content">
+    <div class="title">
+        <h6 class="title-text text-app-black">
+            <span class="pr-4">Program</span>  
+            <span class="text-app-teal">Takeaways</span>
+        </h6>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item" 
+                *ngFor="let testi of formattedItems; let i = index"
+                [ngClass]="{'active': i == 0}">
+                <div class="wrapper">
+                    <div class="testimony_item" *ngFor="let item of testi">
+                        <p class="text-app-black f-16">{{item?.message}}</p>
+                        <p class="f-wb f-16">{{item?.author}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ol class="carousel-indicators testimony_counter">
+            <li data-target="#carouselExampleIndicators" 
+            *ngFor="let item of formattedItems; let i = index"
+            data-slide-to="{{i}}" [ngClass]="{'active_item': i == 0}"></li>
+        </ol>
     </div>
 </div>

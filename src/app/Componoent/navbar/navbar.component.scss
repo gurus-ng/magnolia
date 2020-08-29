@@ -1,8 +1,10 @@
 $mag-green: #A7E66C;
 $app-black: #19191B;
+$primary: #382EA7;
 .navbar{
     padding: 0 1rem 0 4.5rem;
     background: none;
+    z-index: 1;
     position: fixed;
     right: 0;
     left: 0;
@@ -35,13 +37,32 @@ $app-black: #19191B;
 
 .program_dropdown{
     position: absolute;
+    background: #fff;
+    border-radius: 3px;
     height: auto;
-    padding: 1rem .5rem;
+    margin-left: 5px;
+    padding: .5rem;
+    &:after{
+        content: "";
+        position: fixed;
+        background: #212121;
+        top: 0;
+        opacity: .2;
+        left: 0;
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+    }
     .item{
-        padding: .4rem .5rem;
-        border-radius: 3px;
-        &::hover{
+        padding: .2rem .5rem;
+        font-size: 14px;
+        margin-bottom: .4rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover, &:active, &:focus{
             background: #f8f8f4;
+            outline-width: 0;
+            outline: none;
         }
     }
 }
@@ -94,6 +115,7 @@ $app-black: #19191B;
   }
 .mobile-menu{
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2) !important;
+    background: #fff;
     padding: 4rem 3rem;
     .close{
         color: red;
@@ -113,10 +135,11 @@ $app-black: #19191B;
     }
     ul{
         list-style: none;
+        color: $app-black;
         padding: 1rem 0 !important;
-        a{
-            color: $app-black;
-        }
+        // a{
+        //     color: $app-black;
+        // }
         button{
             padding: .3rem 1.2rem;
             border-radius: 3px;
@@ -129,15 +152,15 @@ $app-black: #19191B;
         bottom: 5rem;
     }
 }
+@media (max-width: 599px) {
+    .navbar{
+        .fa-bars{
+            color: $primary !important;
+        }
+    }
+}
 @media (max-width: 768px) {
-    .first_nav{
-        justify-content: flex-start;
-        .address{
-            display: none;
-        }
-        .office_info{
-            width: 100%;
-            justify-content: space-between;
-        }
+    .navbar{
+        padding: 0 5%;
     }
 }

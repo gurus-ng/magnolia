@@ -1,14 +1,5 @@
 html, body { height: 100%; }
 body { margin: 0}
-*{
-  outline: none !important;
-  a,p,li,span,small{
-    font-family: 'PT Sans', sans-serif !important;
-  }
-  h6,h5{
-    font-family: 'Righteous', sans-serif !important;
-  }
-}
 $colorScheme : (
     //3CC44D
     //F26522
@@ -27,7 +18,7 @@ $colorScheme : (
 }
 .bg-app-primary{
     background: color(primary) !important;
-    color: #fff;
+    color: #fff !important;
 }
 .bg-app-teal{
   background: color(teal);
@@ -54,6 +45,9 @@ $colorScheme : (
 }
 .text-app-green{
   color: color(mag-green) !important;
+}
+.text-app-light{
+    color: #fff !important;
 }
 .text-app-teal{
     color:color(teal)
@@ -153,7 +147,7 @@ $colorScheme : (
     font-family: Mermaid;
     font-style: normal;
     font-weight: bold;
-    font-size: 80px;
+    font-size: 68px;
     line-height: 84px;
     letter-spacing: -2.50105px;
 }
@@ -177,4 +171,25 @@ textarea:focus,
 button:focus {
     outline: none !important;
     outline-width: 0;
+}
+.section_content{
+    padding: 3rem 15%;
+}
+@media (max-width: 768px) {
+    .section_content{
+        padding: 5rem 7%;
+    }
+}
+@media (max-width: 599px) {
+    .section_content{
+        padding: 5rem 5%;
+    }
+}
+@media (max-width: 987px) {
+    .head-text{
+        font-size: 50px;
+    }
+    .title-text{
+        font-size: 35px;
+    }
 }
