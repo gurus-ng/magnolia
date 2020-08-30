@@ -152,15 +152,22 @@ $primary: #382EA7;
         bottom: 5rem;
     }
 }
-@media (max-width: 599px) {
-    .navbar{
-        .fa-bars{
-            color: $primary !important;
-        }
-    }
+.mobile-tggler{
+    display: none;
+}
+.desktop-toggler{
+    display: block;
 }
 @media (max-width: 768px) {
     .navbar{
         padding: 0 5%;
+    }
+}
+@media (max-width: 599px) {
+    .mobile-tggler{
+        display: block;
+    }
+    .desktop-toggler{
+        display: none;
     }
 }

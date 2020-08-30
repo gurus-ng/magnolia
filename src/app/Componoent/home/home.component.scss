@@ -55,6 +55,9 @@ $primary: #382EA7;
 }
 .achievements{
     margin-bottom: 2rem;
+    .col-md-4{
+        text-align: center;
+    }
     .title{
         margin-bottom: 5rem;
         h6{
@@ -71,7 +74,6 @@ $primary: #382EA7;
         position: absolute;
         right: -1rem;
         bottom: -1rem;
-        position: absolute;
     }
 }
 .session{
@@ -151,6 +153,17 @@ $primary: #382EA7;
     height: 8px;
     background:$primary !important;
 }
+.modal-content{
+    height: 100%;
+    width: 100%;
+}
+
+.modal-dialog {
+    max-width: 70%;
+    height: 70vh;
+    margin: 5rem auto;
+}
+
 @media (max-width: 768px) {
     .banner{
         .content{
@@ -161,9 +174,20 @@ $primary: #382EA7;
             display: none;
         }
     }
+    .achievements{
+        .row{
+            margin-bottom: 0;
+        }
+        .col-md-4{
+            margin-bottom: 1rem;
+        }
+    }
 }
 @media (max-width: 599px) {
     .banner{
+        .wrapper{
+            padding-top: 7rem;
+        }
         .join_group{
             display: block;
             width: 100%;
@@ -178,11 +202,17 @@ $primary: #382EA7;
                 padding: .75rem 1rem;
             }
         }
-        
+    }
+    .programs{
+        margin-bottom: 1rem;
     }
     .achievements{
         .title{
             width: 100%;
+        }
+        .watermark{
+            right: .5rem;
+            bottom: .5rem;
         }
     }
     .session{
@@ -191,14 +221,14 @@ $primary: #382EA7;
             display: block;
         }
         h6.head-text{
-            width: 46%;
+            width: 100%;
             margin-bottom: 1rem;
         }
         p.clip_desc{
             width: 100%;
         }
         .play_btn{
-            position: absolute;
+            width: 4rem;
         }
     }
     .testimonial{background: #E5E5E5;
@@ -212,6 +242,15 @@ $primary: #382EA7;
         .testimony_item{
             width: 100%;
             margin-bottom: 1rem;
+            &:nth-of-type(even){
+                margin-left: 0;
+            }
         }
     }
+    .modal-dialog {
+        max-width: 95%;
+        height: 50vh;
+        margin: 7rem auto;
+    }
+    
 }

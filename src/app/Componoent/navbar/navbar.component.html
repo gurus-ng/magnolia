@@ -3,7 +3,9 @@
         <img src="../../../assets/img/logo-green.svg" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="menu()">
-        <i class="fas fa-bars text-white"></i>
+        <i class="fas fa-bars text-white desktop-toggler"></i>
+        <i class="fas fa-bars text-app-primary mobile-tggler" 
+        [ngClass]="{'text-app-light': navViewPort == false}"></i>
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 declare var $:any;
 
 @Component({
@@ -7,6 +7,7 @@ declare var $:any;
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild("videoPlayer", { static: false }) videoplayer: ElementRef;
   testimonials = [
     {
       message:`This was an interesting session, i learnt 
@@ -50,5 +51,13 @@ export class HomeComponent implements OnInit {
   moveCarousel(i){
     this.activeItem = i;
     $('#carousel').carousel(i);
+  }
+  play(){
+    let myVideo: any = document.getElementById("my_video");
+    myVideo.play();
+  }
+  stopVideo(){
+    let myVideo: any = document.getElementById("my_video");
+    myVideo.pause();
   }
 }
