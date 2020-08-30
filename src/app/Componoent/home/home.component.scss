@@ -14,6 +14,11 @@ $primary: #382EA7;
         flex-direction: column;
         justify-content: center;
     }
+    .oval{
+        position: absolute;
+        top: 14rem;
+        left: -1rem;
+    }
     .join_group{
         width: 90%;
         display: flex;
@@ -110,10 +115,10 @@ $primary: #382EA7;
         }
     }
 }
-.testimonial{background: #E5E5E5;
+.testimonial{
+    background: #E5E5E5;
     padding-top: 5rem;
     margin-top: -7rem;
-    margin-bottom: 1.5rem;
     .title{
         margin-bottom: 3rem;
     }
@@ -163,7 +168,9 @@ $primary: #382EA7;
     height: 70vh;
     margin: 5rem auto;
 }
-
+video{
+    object-fit: fill;
+}
 @media (max-width: 768px) {
     .banner{
         .content{
@@ -187,6 +194,9 @@ $primary: #382EA7;
     .banner{
         .wrapper{
             padding-top: 7rem;
+        }
+        .oval{
+            top: 7rem;
         }
         .join_group{
             display: block;
