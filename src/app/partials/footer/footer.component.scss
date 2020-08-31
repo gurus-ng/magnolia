@@ -1,0 +1,40 @@
+.section_content{
+    background: #E5E5E5;
+}
+footer .section_content{
+    padding-bottom: 0 !important;
+}
+.intro{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    h6{
+        width: 50%;
+    }
+}
+footer{
+    border-top: 1px solid #EAE9F2;
+    padding-top: 1.7rem;
+    padding-bottom: 2.2rem;
+}
+@media (max-width: 599px) {
+    .intro{
+        display: block;
+        h6{
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .btn_group, .button{
+            width: 100%;
+        }
+    }
+    footer div{
+        text-align: center;
+        margin-bottom: 1rem;
+        width: 100%;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}

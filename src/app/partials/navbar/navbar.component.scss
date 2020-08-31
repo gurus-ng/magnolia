@@ -1,0 +1,7 @@
+@import '../nav.scss';
+$app-black: #19191B;
+.nav-item{
+    a{
+        color: $app-black;
+    }
+}

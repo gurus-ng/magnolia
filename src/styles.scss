@@ -1,5 +1,14 @@
 html, body { height: 100%; }
 body { margin: 0}
+@font-face {
+  font-family: Mermaid;
+  src: url(./assets/Myfonts/Mermaid1001.ttf) format("opentype");
+}
+*{
+  h6{
+    font-family: Mermaid;
+  }
+}
 $colorScheme : (
     //3CC44D
     //F26522
@@ -78,6 +87,9 @@ $colorScheme : (
 .f-12{
   font-size: 12px;
 }
+.f-15{
+  font-size: 15px;
+}
 .f-14{
   font-size: 14px;
 }
@@ -95,7 +107,7 @@ $colorScheme : (
 }
 .f-30{
     font-size: 30px;
-  }
+}
 .f-40{
   font-size: 40px;
 }
@@ -147,7 +159,7 @@ $colorScheme : (
     font-family: Mermaid;
     font-style: normal;
     font-weight: bold;
-    font-size: 68px;
+    font-size: 66px;
     line-height: 84px;
     letter-spacing: -2.50105px;
 }
@@ -155,7 +167,7 @@ $colorScheme : (
     font-family: Mermaid;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 48px;
     line-height: 70px;
     letter-spacing: -1.87579px;
 }
@@ -175,6 +187,9 @@ button:focus {
 .section_content{
     padding: 3rem 15%;
 }
+
+//program  pages custom css
+
 @media (max-width: 768px) {
     .section_content{
         padding: 3rem 7%;

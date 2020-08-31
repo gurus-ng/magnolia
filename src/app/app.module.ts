@@ -1,12 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './Componoent/home/home.component';
-import { AboutComponent } from './Componoent/about/about.component';
-import { NavbarComponent } from './Componoent/navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './components/about/about.component';
+import { HomeComponent } from './components/home/home.component';
+import { MentorshipComponent } from './components/mentorship/mentorship.component';
+import { AltNavbarComponent } from './partials/alt-navbar/alt-navbar.component';
+import { FooterComponent } from './partials/footer/footer.component';
+import { NavbarComponent } from './partials/navbar/navbar.component';
+import { IntenshipComponent } from './components/intenship/intenship.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,10 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     AboutComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    MentorshipComponent,
+    AltNavbarComponent,
+    IntenshipComponent
   ],
   imports: [
     BrowserModule,

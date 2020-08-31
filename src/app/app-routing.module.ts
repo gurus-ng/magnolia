@@ -1,6 +1,7 @@
-import { HomeComponent } from './Componoent/home/home.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { MentorshipComponent } from './components/mentorship/mentorship.component';
 
 
 const routes: Routes = [
@@ -13,11 +14,7 @@ const routes: Routes = [
     data: {title: 'About Us | Magnolia Community'}
   },
   {
-    path:'programs', component:HomeComponent,
-    data: {title: 'Programs | Magnolia Community'}
-  },
-  {
-    path:'programs/mentorship', component:HomeComponent,
+    path:'programs/mentorship', component:MentorshipComponent,
     data: {title: 'Programs | Mentorship | Magnolia Community'}
   },
   {

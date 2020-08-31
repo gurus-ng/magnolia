@@ -1,0 +1,52 @@
+.page_banner{
+    background: url(../../assets/img/clip.svg);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: inherit;
+    display: flex;
+    margin-top: -4rem;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8rem 15% 1rem 15%;
+    .title-text{
+        line-height: 68px;
+    }
+    p{
+        font-size: 18px;
+        line-height: 35px;
+    }
+}
+.gallery{
+    margin-bottom: 2rem;
+    .col-md-4{
+        text-align: center;
+    }
+    .title{
+        margin-bottom: 5rem;
+        h6{
+            margin-bottom: 1.5rem;
+        }
+        
+    }
+    .gallery_img{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .gallery{
+        .row{
+            margin-bottom: 0;
+        }
+        .col-md-4{
+            margin-bottom: 1rem;
+        }
+    }
+}
+@media (max-width: 7599px) {
+    .gallery{
+        .title{
+            width: 100%;
+        }
+    }
+}

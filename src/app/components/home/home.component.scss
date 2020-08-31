@@ -1,0 +1,266 @@
+$mag-green: #A7E66C;
+$primary: #382EA7;
+.banner{
+    .wrapper{
+       // min-height: 100vh;
+    }
+    .banner_bg{
+        
+    }
+    .content{
+        width: 62%;
+        padding: 8rem 7% 2rem 12% ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .oval{
+        position: absolute;
+        top: 14rem;
+        left: -1rem;
+    }
+    .join_group{
+        width: 90%;
+        display: flex;
+        justify-content:space-between;
+        background: #F7F7FB;
+        border: 1px solid #EAE9F2;
+        align-items: center;
+        border-radius: 10px;
+        padding: .3rem .3rem .3rem 1rem;
+        button{
+            width: auto;
+            padding: .8rem 1.5rem;
+            font-weight: bold;
+        }
+        .btn_group{
+            min-width: 50%;
+            display: flex;
+        }
+        input{
+            width: 100%;
+            height: auto;
+            padding: 0 1rem;
+            border: none;
+            background: none;
+        }
+    }
+}
+.programs{
+    margin-bottom: 2.4rem;
+    img{
+        margin-bottom: 2rem;
+    }
+    h6{
+        margin-bottom: 1.5rem;
+    }
+    a{
+        text-decoration: underline;;
+    }
+}
+.achievements{
+    margin-bottom: 2rem;
+    .col-md-4{
+        text-align: center;
+    }
+    .title{
+        margin-bottom: 5rem;
+        h6{
+            margin-bottom: 1.5rem;
+        }
+        
+    }
+    .blog_img{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .watermark{
+        width: auto;
+        position: absolute;
+        right: -1rem;
+        bottom: -1rem;
+    }
+}
+.session{
+    margin-bottom: 1rem;
+    .title{
+        display: flex;
+        margin-bottom: 3rem;
+        align-items: flex-end;
+    }
+    h6.head-text{
+        width: 48%;
+        padding-right: 1rem;
+    }
+    p.clip_desc{
+        width: 52%;
+        font-size: 18px;
+        color: #696871;
+    }
+    .clip{
+        position: relative;
+    }
+    .play_btn{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        cursor: pointer;
+        &:hover, &:active{
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            border: 4px solid $mag-green;
+            border-radius: 50%;
+        }
+    }
+}
+.testimonial{
+    background: #E5E5E5;
+    padding-top: 5rem;
+    margin-top: -7rem;
+    .title{
+        margin-bottom: 3rem;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    .testimony_item{
+        width: 40%;
+        background: #FFFFFF;
+        border: 1px solid #EAE9F2;
+        border-radius: 10px;
+        padding: 1.2rem 1rem;
+        &:nth-of-type(even){
+            margin-left: 2rem;
+        }
+    }
+    .testimony_counter{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        span{
+            width: 17px;
+            height: 8px;
+            background: #cfced4;
+            margin: 0 .2rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    }
+}
+.active_item{
+    width: 45px !important;
+    border-radius: 4px;
+    height: 8px;
+    background:$primary !important;
+}
+.modal-content{
+    height: 100%;
+    width: 100%;
+}
+
+.modal-dialog {
+    max-width: 70%;
+    height: 70vh;
+    margin: 5rem auto;
+}
+video{
+    object-fit: fill;
+}
+@media (max-width: 768px) {
+    .banner{
+        .content{
+            padding: 2rem 5%;
+            width: 100%;
+        }
+        .banner_bg{
+            display: none;
+        }
+    }
+    .achievements{
+        .row{
+            margin-bottom: 0;
+        }
+        .col-md-4{
+            margin-bottom: 1rem;
+        }
+    }
+}
+@media (max-width: 599px) {
+    .banner{
+        .wrapper{
+            padding-top: 7rem;
+        }
+        .oval{
+            top: 7rem;
+        }
+        .join_group{
+            display: block;
+            width: 100%;
+            padding: .4rem .75rem;
+            .btn_group{
+                margin-bottom: .5rem;
+            }
+            button{
+                width: 100% !important;
+            }
+            input{
+                padding: .75rem 1rem;
+            }
+        }
+    }
+    .programs{
+        margin-bottom: 1rem;
+    }
+    .achievements{
+        .title{
+            width: 100%;
+        }
+        .watermark{
+            right: .5rem;
+            bottom: .5rem;
+        }
+    }
+    .session{
+        margin-bottom: 1rem;
+        .title{
+            display: block;
+        }
+        h6.head-text{
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        p.clip_desc{
+            width: 100%;
+        }
+        .play_btn{
+            width: 4rem;
+        }
+    }
+    .testimonial{background: #E5E5E5;
+        .title{
+            margin-bottom: 3rem;
+        }
+        .wrapper{
+            display: block;
+            margin-bottom: 2rem;
+        }
+        .testimony_item{
+            width: 100%;
+            margin-bottom: 1rem;
+            &:nth-of-type(even){
+                margin-left: 0;
+            }
+        }
+    }
+    .modal-dialog {
+        max-width: 95%;
+        height: 50vh;
+        margin: 7rem auto;
+    }
+    
+}
