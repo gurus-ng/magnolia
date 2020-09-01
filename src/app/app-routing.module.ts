@@ -1,3 +1,6 @@
+import { OpenTalkComponent } from './components/open-talk/open-talk.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { IntenshipComponent } from './components/intenship/intenship.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
@@ -18,15 +21,15 @@ const routes: Routes = [
     data: {title: 'Programs | Mentorship | Magnolia Community'}
   },
   {
-    path:'programs/intenship', component:HomeComponent,
+    path:'programs/intenship', component:IntenshipComponent,
     data: {title: 'Programs | Intenship | Magnolia Community'}
   },
   {
-    path:'programs/open-talk', component:HomeComponent,
-    data: {title: 'Programs | Open Talk | Magnolia Community'}
+    path:'programs/open-talk', component:OpenTalkComponent,
+    data: {title: 'Programs | Open Talk Session | Magnolia Community'}
   },
   {
-    path:'contact-us', component:HomeComponent,
+    path:'contact-us', component:ContactComponent,
     data: {title: 'Contact Us | Magnolia Community'}
   },
   {

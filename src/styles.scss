@@ -75,8 +75,17 @@ $colorScheme : (
 }
 .text-app-grey{
   color: color(text-dark) !important;
+  letter-spacing: -0.500211px;
 }
-
+.open-talk-nav{
+  background: #005F58 !important;
+}
+.intenship-nav{
+  background: #6B5ACC !important;
+}
+.contact-nav{
+  background: color(primary) !important;
+}
 //custom font sizes
 .f-12{
   font-size: 12px;

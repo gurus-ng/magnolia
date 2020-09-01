@@ -1,0 +1,86 @@
+.page_banner{
+    background: url(../../../assets/img/open-talk-clip.svg);
+}
+.why_start{
+    margin-bottom: 5rem;
+    .title-text{
+        font-size: 31px !important;
+        color: #005F58;
+        line-height: 45px;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+    }
+    .row:nth-of-type(1){
+        margin-bottom: 10rem;
+        .text{
+            padding-right: 9%;
+            padding-top: 2.7rem;
+            width: 44%;
+        }
+        .image{
+            width: 55%;
+        }
+    }
+    .row:nth-of-type(2){
+        .text{
+            padding-left: 7%;
+            padding-top: 2.7rem;
+            width: 40%;
+        }
+        .image{
+            width: 54%;
+        }
+    }
+    
+}
+@media (max-width: 768px) {
+    .why_start{
+        .row:nth-of-type(1){
+            .text{
+                padding-top: 1rem;
+            }
+        }
+        .row:nth-of-type(2){
+            .text{
+                padding-top: 1rem;
+            }
+        }
+        
+    }
+}
+@media (max-width: 599px) {
+    .why_start{
+        .row{
+            display: block;
+        }
+        .row:nth-of-type(1){
+            margin-bottom: 5rem;
+            .text{
+                padding-right: 15%;
+                padding-top: 0;
+                margin-bottom: 1.5rem;
+                width: 100%;
+            }
+            .image{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .row:nth-of-type(2){
+            .text{
+                padding-left: 0;
+                padding-top: 0;
+                width: 100%;
+            }
+            .image{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+    }
+}
+@import '../programs.scss';

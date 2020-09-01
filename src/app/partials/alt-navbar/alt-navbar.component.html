@@ -1,4 +1,10 @@
-<nav class="navbar navbar-expand-lg" [ngClass]="{'bg-app-primary': navViewPort == false}">
+<nav class="navbar navbar-expand-lg" 
+[ngClass]="{
+    'bg-app-primary': navViewPort == false && url.includes('mentorship'),
+    'intenship-nav': navViewPort == false && url.includes('intenship'),
+    'open-talk-nav': navViewPort == false && url.includes('open-talk'),
+    'contact-nav': navViewPort == false && url.includes('contact-us')
+}">
     <a class="navbar-brand py-0" >
         <img src="../../../assets/img/logo-white.svg" alt="">
     </a>
@@ -20,9 +26,10 @@
                 [routerLinkActiveOptions]="{exact: true}">About</a>
             </li>
             <li class="nav-item programs">
-                <a class="nav-link" [ngClass]="{'router_active': url.includes('programs')}">
+                <a class="nav-link c_p d-flex" (click)="toggleDrpdown()"
+                [ngClass]="{'router_active': url.includes('programs')}">
                     Programs
-                    <img class="ml-2 c_p" src="../../../assets/img/caret.svg" (click)="toggleDrpdown()">
+                    <i class="icofont-simple-down iconfont text-white" ></i>
                 </a>
                 <div class="program_dropdown" *ngIf="dropdown">
                     <div class="item">

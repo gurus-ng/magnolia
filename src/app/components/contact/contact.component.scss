@@ -1,0 +1,52 @@
+.page_banner{
+    background: url(../../../assets/img/contact-clip.svg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: inherit;
+    display: flex;
+    margin-top: -4rem;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8rem 15% 1rem 15%;
+}
+.contact_form{
+    margin-bottom: 7rem;
+    .title-text{
+        margin-bottom: 4rem;
+    }
+    .contact_input{
+        width: 100%;
+        border-radius: 10px;
+        background: #fff;
+        border: 1px solid #EAE9F2;
+        padding: .8rem 1.5rem;
+        font-family: Circular Std;
+        font-style: normal;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: -0.562737px;
+        color: #9C9AAA;
+        &::placeholder{
+            color: #9C9AAA;
+            font-size: 16px;
+        }
+    }
+    textarea{
+        height: 6rem;
+    }
+    .button{
+        padding: .9rem 1.5rem;
+        border-radius: 10px;
+    }
+    .group{
+        margin-bottom: 1.5rem;
+        p{
+            margin-bottom: 1rem;
+        }
+        span{
+            font-size: 18px;
+        }
+    }
+    
+}

@@ -23,12 +23,13 @@
                 [routerLink]="['/about-us']" routerLinkActive="router_active" 
                 [routerLinkActiveOptions]="{exact: true}">About</a>
             </li>
-            <li class="nav-item programs" [ngClass]="{}">
-                <a class="nav-link" [ngClass]="{
+            <li class="nav-item programs">
+                <a class="nav-link d-flex c_p" [ngClass]="{
                     'router_active': url.includes('programs'),
-                    'text-app-light': navViewPort == false
-                    }">Programs
-                    <img class="ml-2 c_p" src="../../../assets/img/caret.svg" (click)="toggleDrpdown()">
+                    'text-app-light': navViewPort == false }"
+                    (click)="toggleDrpdown()">Programs
+                    <i class="icofont-simple-down iconfont text-app-black" 
+                    [ngClass]="{'text-app-light': navViewPort == false}"></i>
                 </a>
                 <div class="program_dropdown" *ngIf="dropdown">
                     <div class="item">

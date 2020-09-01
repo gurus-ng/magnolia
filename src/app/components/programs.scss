@@ -1,5 +1,4 @@
 .page_banner{
-    background: url(../../assets/img/clip.svg);
     height: 600px;
     background-repeat: no-repeat;
     background-size: inherit;
@@ -33,6 +32,30 @@
         border-top-right-radius: 15px;
     }
 }
+.why_start{
+    img{
+        border-radius: 15px;
+    }
+    h6.title-text{
+        margin-bottom: 4rem;
+    }
+}
+.beneficiaries h6, .achievement h6{
+    margin-bottom: 2rem;
+}
+.achievement p{
+    padding-left: 1.3rem;
+        &::before{
+        content: '';
+        position: absolute;
+        width: 8.5px;
+        top: 8px;
+        left: 1.2rem;
+        height: 8.5px;
+        border-radius: 50%;
+        background: #000;
+    }
+}
 @media (max-width: 768px) {
     .gallery{
         .row{
@@ -43,7 +66,7 @@
         }
     }
 }
-@media (max-width: 7599px) {
+@media (max-width: 599px) {
     .gallery{
         .title{
             width: 100%;

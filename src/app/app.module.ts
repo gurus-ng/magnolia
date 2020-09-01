@@ -9,6 +9,8 @@ import { AltNavbarComponent } from './partials/alt-navbar/alt-navbar.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { NavbarComponent } from './partials/navbar/navbar.component';
 import { IntenshipComponent } from './components/intenship/intenship.component';
+import { OpenTalkComponent } from './components/open-talk/open-talk.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { IntenshipComponent } from './components/intenship/intenship.component';
     FooterComponent,
     MentorshipComponent,
     AltNavbarComponent,
-    IntenshipComponent
+    IntenshipComponent,
+    OpenTalkComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
