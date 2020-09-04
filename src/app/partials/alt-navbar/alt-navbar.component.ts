@@ -29,7 +29,7 @@ export class AltNavbarComponent implements OnInit {
   }
   menu(){
     let slide = document.getElementById('menu')
-    slide.classList.toggle('motion_in')
+    slide.classList.toggle('slide_in')
   }
   toggleDrpdown(){
     this.dropdown = !this.dropdown;
