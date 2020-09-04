@@ -3,7 +3,7 @@
     <div class="banner" (click)="collapseDropdown()">
         <img src="../../../assets/img/Oval.svg" alt="" class="oval">
         <div class="wrapper d-flex">
-            <div class="content">
+            <div class="content banner_text" id="slideText">
                 <h6 class="title-text text-app-black mb-4">Inspiring the growth inside of you</h6>
                 <p class="text-ap-grey f-16 mb-4">
                     We are a community that exists to inspire growth and make the path to 
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="banner_bg pr-0">
-                <img src="../../../assets/img/banner-image.png" class="img-fluid" alt="">
+                <img src="../../../assets/img/banner-image.png" class="" alt="">
             </div>
         </div>
     </div>
@@ -67,31 +67,9 @@
                 projects, take a look at what we have achieved so far 
             </p>
         </div>
-        <div class="row mb-3">
-            <div class="col-md-4">
-                <img src="../../../assets/img/blog-1-home.svg" alt="" class="blog_img img-fluid">
-                <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
-            </div>
-            <div class="col-md-4">
-                <img src="../../../assets/img/blog-2-home.svg" alt="" class="blog_img img-fluid">
-                <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
-            </div>
-            <div class="col-md-4">
-                <img src="../../../assets/img/blog-3-home.svg" alt="" class="blog_img img-fluid">
-                <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
-            </div>
-        </div>
         <div class="row">
-            <div class="col-md-4">
-                <img src="../../../assets/img/blog-4-home.svg" alt="" class="blog_img img-fluid">
-                <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
-            </div>
-            <div class="col-md-4">
-                <img src="../../../assets/img/blog-5-home-2.svg" alt="" class="blog_img img-fluid">
-                <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
-            </div>
-            <div class="col-md-4">
-                <img src="../../../assets/img/blog-6-home.svg" alt="" class="blog_img img-fluid">
+            <div class="col-md-4 mb-3" *ngFor="let item of gallery; let i = index">
+                <img [src]="item?.src" alt="" class="gallery_img img-fluid c_p" (click)="open(i)">
                 <img src="../../../assets/img/watermark.svg" alt="" class="watermark">
             </div>
         </div>

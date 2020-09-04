@@ -1,7 +1,7 @@
 <app-alt-navbar></app-alt-navbar>
 <div class="page_banner">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 banner_text" id="slideText">
             <h6 class="text-white title-text f-wb mb-3">
                 The magnolia <br> mentorship program
             </h6>
@@ -77,26 +77,9 @@
             projects, take a look at what we have achieved so far  
         </p>
     </div>
-    <div class="row mb-3">
-        <div class="col-md-4">
-            <img src="../../../assets/img/blog-1-home.svg" alt="" class="gallery_img img-fluid">
-        </div>
-        <div class="col-md-4">
-            <img src="../../../assets/img/blog-2-home.svg" alt="" class="gallery_img img-fluid">
-        </div>
-        <div class="col-md-4">
-            <img src="../../../assets/img/blog-3-home.svg" alt="" class="gallery_img img-fluid">
-        </div>
-    </div>
     <div class="row">
-        <div class="col-md-4">
-            <img src="../../../assets/img/blog-4-home.svg" alt="" class="gallery_img img-fluid">
-        </div>
-        <div class="col-md-4">
-            <img src="../../../assets/img/blog-5-home-2.svg" alt="" class="gallery_img img-fluid">
-        </div>
-        <div class="col-md-4">
-            <img src="../../../assets/img/blog-6-home.svg" alt="" class="gallery_img img-fluid">
+        <div class="col-md-4 mb-3" *ngFor="let item of gallery; let i = index">
+            <img [src]="item?.src" alt="" class="gallery_img img-fluid c_p" (click)="open(i)">
         </div>
     </div>
 </div>

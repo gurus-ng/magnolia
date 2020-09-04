@@ -86,6 +86,9 @@ $colorScheme : (
 .contact-nav{
   background: color(primary) !important;
 }
+.about-nav{
+  background: color(primary) !important;
+}
 //custom font sizes
 .f-12{
   font-size: 12px;
@@ -196,9 +199,32 @@ button:focus {
 .section_content{
     padding: 3rem 15%;
 }
-
-//program  pages custom css
-
+.banner_text{
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards; 
+  transform: translateX(-150%);
+  transition: transform 1.5s ease-in-out;
+}
+@keyframes fadeInText { 
+  0% { 
+      opacity: 0; 
+  }
+  25% { 
+      opacity: 0.25; 
+  } 
+  50% { 
+    opacity: 0.5; 
+  }
+  75% { 
+    opacity: 0.75; 
+  } 
+  100% { 
+      opacity: 1; 
+  } 
+}
+.motion_in{
+  transform: translateX(0);
+}
 @media (max-width: 768px) {
     .section_content{
         padding: 3rem 7%;
@@ -216,4 +242,10 @@ button:focus {
     .title-text{
         font-size: 35px;
     }
+}
+@media screen and (min-width: 1400px) {
+  .page_banner{
+      background-size: cover;
+      margin-bottom: 1.5rem;
+  }
 }

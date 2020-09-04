@@ -1,4 +1,7 @@
+import { LightboxComponent } from './../lightbox/lightbox.component';
+import { gallery } from './../images';
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { MatDialogConfig, MatDialog } from '@angular/material/dialog';
 declare var $:any;
 
 @Component({
@@ -30,14 +33,21 @@ export class HomeComponent implements OnInit {
   ]
   formattedItems = [];
   activeItem = 0;
-  constructor() { }
+  gallery = gallery;
+  constructor(
+    private matDialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     $('#carousel').carousel({
       interval: 5000
     })
+    setTimeout(() => {
+      let slide = document.getElementById('slideText')
+      slide.classList.add('motion_in')
+    }, 50);
     if ($('#carousel').carousel(1).hasClass('active')) {
-      alert("this is an alert");
+      //alert("this is an alert");
   }
     let size = 2;
     this.formattedItems = new Array(Math.ceil(this.testimonials.length / size)).fill("")
@@ -47,6 +57,19 @@ export class HomeComponent implements OnInit {
   }
   collapseDropdown(){
     
+  }
+  open(index: number): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.data = {
+      active: index,
+      gallery: this.gallery
+    }
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '576px';
+    dialogConfig.hasBackdrop = true;
+    dialogConfig.closeOnNavigation = true;
+    this.matDialog.open(LightboxComponent, dialogConfig);  
   }
   moveCarousel(i){
     this.activeItem = i;

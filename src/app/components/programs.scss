@@ -1,8 +1,9 @@
 .page_banner{
     height: 600px;
     background-repeat: no-repeat;
-    background-size: inherit;
+    background-size: auto;
     display: flex;
+    min-width: 100%;
     margin-top: -4rem;
     justify-content: center;
     flex-direction: column;
@@ -73,3 +74,4 @@
         }
     }
 }
+

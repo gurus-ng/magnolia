@@ -28,7 +28,9 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss",
+              "./node_modules/ngx-lightbox/lightbox.css",
               "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
@@ -76,14 +78,15 @@
           "configurations": {
             "production": {
               "browserTarget": "magnolia:build:production",
-              "port": 3000
+              "port": 13000
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "magnolia:build"          }
+            "browserTarget": "magnolia:build"
+          }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -97,7 +100,9 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss",
+              "./node_modules/ngx-lightbox/lightbox.css",
               "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
@@ -133,6 +138,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "magnolia"
 }

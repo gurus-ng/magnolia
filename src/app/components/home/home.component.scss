@@ -1,11 +1,10 @@
 $mag-green: #A7E66C;
 $primary: #382EA7;
 .banner{
-    .wrapper{
-       // min-height: 100vh;
-    }
     .banner_bg{
-        
+        img{
+            height: 100vh;
+        }
     }
     .content{
         width: 62%;

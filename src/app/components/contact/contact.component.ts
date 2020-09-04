@@ -10,6 +10,10 @@ export class ContactComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      let slide = document.getElementById('slideText')
+      slide.classList.add('motion_in')
+    }, 50);
   }
 
 }

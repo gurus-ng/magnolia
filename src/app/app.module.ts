@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
+import { IntenshipComponent } from './components/intenship/intenship.component';
+import { LightboxComponent } from './components/lightbox/lightbox.component';
 import { MentorshipComponent } from './components/mentorship/mentorship.component';
+import { OpenTalkComponent } from './components/open-talk/open-talk.component';
 import { AltNavbarComponent } from './partials/alt-navbar/alt-navbar.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { NavbarComponent } from './partials/navbar/navbar.component';
-import { IntenshipComponent } from './components/intenship/intenship.component';
-import { OpenTalkComponent } from './components/open-talk/open-talk.component';
-import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,14 @@ import { ContactComponent } from './components/contact/contact.component';
     AltNavbarComponent,
     IntenshipComponent,
     OpenTalkComponent,
-    ContactComponent
+    ContactComponent,
+    LightboxComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    MatDialogModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

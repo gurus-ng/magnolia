@@ -1,3 +1,4 @@
+import { AboutComponent } from './components/about/about.component';
 import { OpenTalkComponent } from './components/open-talk/open-talk.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { IntenshipComponent } from './components/intenship/intenship.component';
@@ -13,7 +14,7 @@ const routes: Routes = [
     data: {title: 'Homepage | Magnolia Community'}
   },
   {
-    path:'about-us', component:HomeComponent,
+    path:'about-us', component:AboutComponent,
     data: {title: 'About Us | Magnolia Community'}
   },
   {

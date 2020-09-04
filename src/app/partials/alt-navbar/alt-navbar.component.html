@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg" 
 [ngClass]="{
     'bg-app-primary': navViewPort == false && url.includes('mentorship'),
+    'about-nav': navViewPort == false && url.includes('about-us'),
     'intenship-nav': navViewPort == false && url.includes('intenship'),
     'open-talk-nav': navViewPort == false && url.includes('open-talk'),
     'contact-nav': navViewPort == false && url.includes('contact-us')
@@ -68,7 +69,7 @@
           <i class="fa fa-times close c_p" (click)="menu()"></i>
       </span>
       <div class="company_logo mt-3">
-        <img src="../../../assets/img/favicon.svg" alt="">
+        <img src="../../../assets/img/logo-green.svg" alt="">
       </div>
       <ul>
           <li class="side_link active" >
@@ -78,14 +79,16 @@
           </li>
           <li class="side_link">
               <a class="nav-link" 
-              [routerLink]="['/about']" 
+              [routerLink]="['/about-us']" 
               routerLinkActive="router_active" 
               [routerLinkActiveOptions]="{exact: true}">About Us</a>
           </li>
           <li class="side_link" >
             <a class="nav-link"
-            [ngClass]="{'router_active': route == true}">Programs</a>
-            <ul class="list-unstyled">
+            [ngClass]="{'router_active': url.includes('programs')}">Programs
+            <i class="icofont-simple-down iconfont text-app-black ml-2" ></i>
+            </a>
+            <div class="list-unstyled pl-3">
                 <li class="side_link" >
                     <a class="nav-link" 
                     [routerLink]="['/programs/mentorship']" 
@@ -102,14 +105,14 @@
                     routerLinkActive="router_active" 
                     [routerLinkActiveOptions]="{exact: true}">Open Talk</a>
                 </li>
-            </ul>
+            </div>
           </li>
           <li class="side_link" >
             <a class="nav-link" [routerLink]="['/contact-us']" routerLinkActive="router_active" 
             [routerLinkActiveOptions]="{exact: true}">Contact</a>
           </li>
           <li class="side_link">
-              <button class="nav-link bg-app-teal join w-100">Join Community</button>
+              <button class="nav-link bg-app-teal join w-100 text-white">Join Community</button>
           </li>
       </ul>
       

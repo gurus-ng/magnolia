@@ -9,7 +9,11 @@ export class AboutComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    setTimeout(() => {
+      let slide = document.getElementById('slideText')
+      slide.classList.add('motion_in')
+    }, 50);
   }
 
 }
