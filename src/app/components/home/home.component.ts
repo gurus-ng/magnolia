@@ -1,3 +1,4 @@
+import { ImageService } from './../../Services/image.service';
 import { LightboxComponent } from './../lightbox/lightbox.component';
 import { gallery } from './../images';
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
@@ -33,12 +34,16 @@ export class HomeComponent implements OnInit {
   ]
   formattedItems = [];
   activeItem = 0;
-  gallery = gallery;
+  gallery = [];
+  videoUrl = "";
   constructor(
-    private matDialog: MatDialog
+    private matDialog: MatDialog,
+    private imageService: ImageService
   ) { }
 
   ngOnInit(): void {
+    this.getGallery();
+    this.getVideo();
     $('#carousel').carousel({
       interval: 5000
     })
@@ -58,6 +63,14 @@ export class HomeComponent implements OnInit {
   collapseDropdown(){
     
   }
+  async getGallery(){
+    let res:any = await this.imageService.getGallery();
+    this.gallery = res;
+  }
+  async getVideo(){
+    let res:any = await this.imageService.getVideo();
+    this.videoUrl = res;
+  }
   open(index: number): void {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
@@ -66,7 +79,7 @@ export class HomeComponent implements OnInit {
       gallery: this.gallery
     }
     dialogConfig.autoFocus = true;
-    dialogConfig.width = '576px';
+    dialogConfig.width = '764px';
     dialogConfig.hasBackdrop = true;
     dialogConfig.closeOnNavigation = true;
     this.matDialog.open(LightboxComponent, dialogConfig);  

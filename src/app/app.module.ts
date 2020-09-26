@@ -14,6 +14,7 @@ import { OpenTalkComponent } from './components/open-talk/open-talk.component';
 import { AltNavbarComponent } from './partials/alt-navbar/alt-navbar.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { NavbarComponent } from './partials/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { NavbarComponent } from './partials/navbar/navbar.component';
     BrowserModule,
     MatDialogModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule
   ],
   providers: [],

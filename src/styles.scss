@@ -3,10 +3,20 @@ body { margin: 0}
 @font-face {
   font-family: Mermaid;
   src: url(./assets/Myfonts/Mermaid1001.ttf) format("opentype");
+  font-family: Museo;
+  src: url(./assets/Myfonts/MuseoSans-300.otf) format("opentype");
+  font-family: Museo-light;
+  src: url(./assets/Myfonts/MuseoSans-100.otf) format("opentype");
 }
 *{
   h6{
     font-family: Mermaid;
+  }
+  p,a,li{
+    font-family: Museo !important;
+  }
+  span, small{
+    font-family: Museo-light !important;
   }
 }
 $colorScheme : (
@@ -88,6 +98,23 @@ $colorScheme : (
 }
 .about-nav{
   background: color(primary) !important;
+}
+mat-dialog-container{
+  background: rgba(0,0,0,.7) !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+mat-dialog-content{
+  position: absolute;
+  top: 5rem;
+  bottom: 5rem;
+  right: 10%;
+  left: 10%;
+  text-align: center;
+  max-height: inherit !important;
 }
 //custom font sizes
 .f-12{

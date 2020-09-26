@@ -2,15 +2,13 @@
     <i class="fas fa-times text-danger c_p" (click)="close()"></i>
 </div>
 <mat-dialog-content>
-    <div class="main">
+    
         <span class="prev text-white" *ngIf="activeIndex !== 0">
             <i class="fas fa-arrow-left" (click)="prev()"></i>
         </span>
         <span class="next text-white" *ngIf="activeIndex + 1 != this.dialogData.gallery.length">
             <i class="fas fa-arrow-right" (click)="next()"></i>
         </span>
-        <div class="image text-center">
-            <img [src]="img?.src" alt="" class="img-fluid">
-        </div>
-    </div>
+        <img [src]="img?.src" alt="" >
+    
 </mat-dialog-content>
