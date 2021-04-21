@@ -15,8 +15,8 @@ export class HomeComponent implements OnInit {
   testimonials = [
     {
       message:`This was an interesting session, i learnt 
-      alot from sharing our views. It was very interactive, thanks for this!`,
-      author: `Support Group Session`
+      a lot from sharing our views. It was very interactive, thanks for this!`,
+      author: `Participant`
     },
     {
       message:`I loved the fact that we had experts to guide us and resources to take home, it was a very good session.`,
@@ -25,11 +25,11 @@ export class HomeComponent implements OnInit {
     {
       message:`A really good session, i learnt 
       alot from sharing our views. It was very interactive, thanks for this!`,
-      author: `Mentorship group Attendant`
+      author: `Participant`
     },
     {
       message:`I enjoyed the fact that we had experts to guide us and resources to take home, it was a very good session.`,
-      author: `Kwesi Peters`
+      author: `Participant`
     },
   ]
   formattedItems = [];

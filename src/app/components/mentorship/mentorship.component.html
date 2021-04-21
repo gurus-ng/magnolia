@@ -1,86 +1,91 @@
 <app-alt-navbar></app-alt-navbar>
 <div class="page_banner">
-    <div class="row">
-        <div class="col-md-6 banner_text" id="slideText">
-            <h6 class="text-white title-text f-wb mb-3">
-                The magnolia <br> mentorship program
-            </h6>
-            <p class="text-white f-16">
-                Providing career and educational guidance.
-                Helping encourage self development, self growth 
-                and self achievements.
-            </p>
-        </div>
+  <div class="row">
+    <div class="col-md-6 banner_text" id="slideText">
+      <h6 class="text-white title-text f-wb mb-3">
+        The magnolia <br />
+        mentorship program
+      </h6>
+      <p class="text-white f-16">
+        Providing career and educational guidance. Helping encourage self
+        development, self growth and self achievements.
+      </p>
     </div>
+  </div>
 </div>
 <div class="why_start section_content pt-0">
-    <h6 class="title-text">
-        Why start this mentorship program?
-    </h6>
-    <div class="row">
-        <div class="col-md-5 mb-3 mb-md-0 pr-0 pr-md-5">
-            <h6 class="text-app-primary f-30 f-wb">The Reality</h6>
-            <p class="text-app-grey f-16">
-                Most often, children grow up without necessarily
-                having mentors to hold their hands through making 
-                important life and career decisions. 
-            </p>
-            <p class="text-app-grey f-16">
-                This doesn’t look to disregard parents but to 
-                focus on the gap that somany youths have. We personally 
-                have experienced being mentored and can clearly 
-                point out the inputs and impacts that has brought 
-                to us and this is exactly what we seek to do for the youth. 
-            </p>
-        </div>
-        <div class="col-md-7 pl-0 pl-md-5">
-            <img src="../../../assets/img/mentorship-img.png" alt="" class="img-fluid">
-        </div>
+  <h6 class="title-text">Why start this mentorship program?</h6>
+  <div class="row">
+    <div class="col-md-5 mb-3 mb-md-0 pr-0 pr-md-5">
+      <h6 class="text-app-primary f-30 f-wb">The Reality</h6>
+      <p class="text-app-grey f-16">
+        Most often, children grow up without necessarily having mentors to hold
+        their hands through making important life and career decisions.
+      </p>
+      <p class="text-app-grey f-16">
+        This doesn’t look to disregard parents but to focus on the gap that so
+        many youths have. We personally have experienced being mentored and can
+        clearly point out the impact these mentorships made in our various lives
+        and this is exactly what we seek to do for the youth.
+      </p>
     </div>
+    <div class="col-md-7 pl-0 pl-md-5">
+      <img
+        src="../../../assets/img/mentorship-img.png"
+        alt=""
+        class="img-fluid"
+      />
+    </div>
+  </div>
 </div>
 <div class="achievement section_content mb-2">
-    <h6 class="f-wb f-18 text-app-grey">What does it seek to achieve?</h6>
-    <div class="row">
-        <div class="col-md-4 mb-3 mb-md-0">
-            <p class="text-app-grey f-15">
-                Help mentees identify their abilities and
-                capabilities unknown to them.
-            </p>
-        </div>
-        <div class="col-md-4 mb-3 mb-md-0">
-            <p class="text-app-grey f-15">
-                Help provide career and educational guidance.
-            </p>
-        </div>
-        <div class="col-md-4 mb-3 mb-md-0">
-            <p class="text-app-grey f-15">
-                Help encourage self development, self growth and self achievements.
-            </p>
-        </div>
+  <h6 class="f-wb f-18 text-app-grey">What does it seek to achieve?</h6>
+  <div class="row">
+    <div class="col-md-4 mb-3 mb-md-0">
+      <p class="text-app-grey f-15">
+        Help mentees identify their abilities and capabilities unknown to them.
+      </p>
     </div>
+    <div class="col-md-4 mb-3 mb-md-0">
+      <p class="text-app-grey f-15">
+        Help provide career and educational guidance.
+      </p>
+    </div>
+    <div class="col-md-4 mb-3 mb-md-0">
+      <p class="text-app-grey f-15">
+        Help encourage self development, self growth and self achievements.
+      </p>
+    </div>
+  </div>
 </div>
 <div class="beneficiaries section_content pt-0 mb-4">
-    <h6 class="f-wb f-18 text-app-grey">Who are the beneficiaries?</h6>
-    <div class="row">
-        <div class="col-md-5 pr-0 pr-md-5">
-            <p class="text-app-grey f-15">
-                Form 1 to Form 3 Senior high school students who
-                go through our mentorship program and are keen on learning.
-            </p>
-        </div>
+  <h6 class="f-wb f-18 text-app-grey">Who are the beneficiaries?</h6>
+  <div class="row">
+    <div class="col-md-5 pr-0 pr-md-5">
+      <p class="text-app-grey f-15">
+        Form 1 to Form 3 Senior high school students who go through our
+        mentorship program and are keen on learning.
+      </p>
     </div>
+  </div>
 </div>
-<div class="gallery section_content">
-    <div class="title text-center">
-        <h6 class="text-app-black title-text">Gallery</h6>
-        <p class="text-app-black f-18">We have grown since 2018 and plan a bigger expansion <br>
-            projects, take a look at what we have achieved so far  
-        </p>
+<!-- <div class="gallery section_content">
+  <div class="title text-center">
+    <h6 class="text-app-black title-text">Gallery</h6>
+    <p class="text-app-black f-18">
+      We have grown since 2018 and plan a bigger expansion <br />
+      projects, take a look at what we have achieved so far
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mb-3" *ngFor="let item of gallery; let i = index">
+      <img
+        [src]="item?.src"
+        alt=""
+        class="gallery_img img-fluid c_p"
+        (click)="open(i)"
+      />
     </div>
-    <div class="row">
-        <div class="col-md-4 mb-3" *ngFor="let item of gallery; let i = index">
-            <img [src]="item?.src" alt="" class="gallery_img img-fluid c_p" (click)="open(i)">
-        </div>
-    </div>
-</div>
+  </div>
+</div> -->
 <app-footer></app-footer>
