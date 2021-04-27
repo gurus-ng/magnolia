@@ -28,5 +28,15 @@ export const gallery = [
         thumb: "../../../assets/img/blog-6-home.svg",
         src: "../../../assets/img/blog-6-home.svg",
         caption: ''
-    }
+    },
+    {
+        thumb: "../../../assets/img/new-photo.jpg",
+        src: "../../../assets/img/new-photo.jpg",
+        caption: ''
+    },
+    {
+        thumb: "../../../assets/img/new-photo-2.jpg",
+        src: "../../../assets/img/new-photo-2.jpg",
+        caption: ''
+    },
 ]

@@ -39,5 +39,4 @@ export class OpenTalkComponent implements OnInit {
     dialogConfig.closeOnNavigation = true;
     this.matDialog.open(LightboxComponent, dialogConfig);  
   }
-
 }

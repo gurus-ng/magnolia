@@ -23,12 +23,25 @@ export class HomeComponent implements OnInit {
       author: `Support Group Session`
     },
     {
+      message:`I really enjoyed this program and this is my first time attending a program like this. I think it is interesting and really learnt a lot.`,
+      author: `Participant`
+    },
+    {
       message:`A really good session, i learnt 
       alot from sharing our views. It was very interactive, thanks for this!`,
       author: `Participant`
     },
     {
       message:`I enjoyed the fact that we had experts to guide us and resources to take home, it was a very good session.`,
+      author: `Participant`
+    },
+    {
+      message:`Was awesome! Was super great. Hope there will be a lot more of programs like this to help. Plus the cocktail was dope!`,
+      author: `Participant`
+    },
+    {
+      message:`
+It was a well organized program. Ability to engage freely with the resource person was helpful. Thank you.`,
       author: `Participant`
     },
   ]
