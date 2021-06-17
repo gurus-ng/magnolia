@@ -49,6 +49,8 @@ It was a well organized program. Ability to engage freely with the resource pers
   activeItem = 0;
   gallery = [];
   videoUrl = "";
+  email: any;
+
   constructor(
     private matDialog: MatDialog,
     private imageService: ImageService
@@ -108,5 +110,9 @@ It was a well organized program. Ability to engage freely with the resource pers
   stopVideo(){
     let myVideo: any = document.getElementById("my_video");
     myVideo.pause();
+  }
+
+  emailSubmit() {
+    console.log(this.email)
   }
 }

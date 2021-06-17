@@ -15,6 +15,7 @@ import { AltNavbarComponent } from './partials/alt-navbar/alt-navbar.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { NavbarComponent } from './partials/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,14 +29,15 @@ import { HttpClientModule } from '@angular/common/http';
     IntenshipComponent,
     OpenTalkComponent,
     ContactComponent,
-    LightboxComponent
+    LightboxComponent,
   ],
   imports: [
     BrowserModule,
     MatDialogModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
