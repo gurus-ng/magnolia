@@ -9,8 +9,9 @@
         </h6>
         <p class="text-ap-grey f-16 mb-4">
           We are a community that exists to inspire growth and make the path to
-          finding one’s self as a young adult easier, by providing the necessary
-          resources such as mentorships, mental health workshops and internships.
+          finding one's self as a young adult easier. We do this by providing
+          the necessary resources such as mentorships, mental health workshops
+          and internships/volunteering opportunities
         </p>
         <div class="join_group">
           <div class="btn_group">
@@ -18,10 +19,13 @@
             <input
               type="text"
               class="text-app-grey"
+              [(ngModel)]="email"
               placeholder="Email address"
             />
           </div>
-          <button class="button f-16 join bg-app-teal">I want to join</button>
+          <button class="button f-16 join bg-app-teal" (click)="emailSubmit()">
+            I want to join
+          </button>
         </div>
       </div>
       <div class="banner_bg pr-0">
@@ -83,21 +87,11 @@
         Our <span class="text-app-teal">Achievements</span>
       </h6>
       <p class="text-app-black f-18">
-        We have grown since 2018 and plan a bigger expansion <br />
-        projects, take a look at what we have achieved so far
+        We have grown since 2018 and are in the planning stage of bigger
+        projects. Take a look at our
+        <a [routerLink]="['/programs/open-talk']" fragment="gallery">gallery</a>
+        to see what we have done so far
       </p>
-    </div>
-    <div class="row">
-      <div class="col-md-4 mb-3" *ngFor="let item of gallery; let i = index">
-        <img
-          [src]="item?.src"
-          alt=""
-          class="gallery_img img-fluid c_p card-img"
-          (click)="open(i)"
-          style="height: 336px;"
-        />
-        <img src="../../../assets/img/watermark.svg" alt="" class="watermark" />
-      </div>
     </div>
   </div>
   <div class="session section_content">
@@ -160,37 +154,4 @@
     </div>
   </div>
   <app-footer></app-footer>
-</div>
-<!-- Modal -->
-<div
-  class="modal fade"
-  id="vidModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="text-right p-2">
-        <span
-          class="text-danger c_p f-w6"
-          data-dismiss="modal"
-          (click)="stopVideo()"
-          >Close</span
-        >
-      </div>
-      <video
-        id="my_video"
-        class="video-js vjs-default-skin"
-        width="100%"
-        height="100%"
-        controls
-        preload="none"
-        poster="http://video-js.zencoder.com/oceans-clip.jpg"
-        data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'
-      >
-        <source [src]="videoUrl" type="video/mp4" />
-      </video>
-    </div>
-  </div>
 </div>
