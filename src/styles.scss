@@ -1,5 +1,10 @@
-html, body { height: 100%; }
-body { margin: 0}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
 @font-face {
   font-family: Mermaid;
   src: url(./assets/Myfonts/Mermaid1001.ttf) format("opentype");
@@ -8,106 +13,109 @@ body { margin: 0}
   font-family: Museo-light;
   src: url(./assets/Myfonts/MuseoSans-100.otf) format("opentype");
 }
-*{
-  h6{
+* {
+  h6 {
     font-family: Mermaid;
   }
-  p,a,li{
+  p,
+  a,
+  li {
     font-family: Museo !important;
   }
-  span, small{
+  span,
+  small {
     font-family: Museo-light !important;
   }
 }
-$colorScheme : (
-    //3CC44D
-    //F26522
-    primary:#382EA7,
-    teal: #4ED8CE,
-    altTeal: #D3F5D3,
-    mag-green: #A7E66C,
-    tertiary: #F7B924,
-    alt: #fd976629,
-    text-black: #19191B,
-    text-grey: #698971,
+$colorScheme: (
+  //3CC44D
+  //F26522
+  primary: #382ea7,
+  teal: #4ed8ce,
+  altTeal: #d3f5d3,
+  mag-green: #a7e66c,
+  tertiary: #f7b924,
+  alt: #fd976629,
+  text-black: #19191b,
+  text-grey: #698971
 );
 
 @function color($key) {
-    @return map-get($colorScheme, $key);
+  @return map-get($colorScheme, $key);
 }
-.bg-app-primary{
-    background: color(primary) !important;
-    color: #fff !important;
+.bg-app-primary {
+  background: color(primary) !important;
+  color: #fff !important;
 }
-.bg-app-teal{
+.bg-app-teal {
   background: color(teal);
   color: #fff;
 }
-.bg-app-lightteal{
-    background: color(altTeal);
+.bg-app-lightteal {
+  background: color(altTeal);
 }
-.bg-app-outlet{
+.bg-app-outlet {
   background: color(outlet);
   color: #fff;
 }
-.bg-app-black{
+.bg-app-black {
   background: color(text-black);
   color: #fff;
 }
 
-.bg-app-green{
+.bg-app-green {
   background: color(mag-green) !important;
   color: #fff;
 }
-.text-app-primary{
-    color: color(primary) !important;
+.text-app-primary {
+  color: color(primary) !important;
 }
-.text-app-green{
+.text-app-green {
   color: color(mag-green) !important;
 }
-.text-app-light{
-    color: #fff !important;
+.text-app-light {
+  color: #fff !important;
 }
-.text-app-teal{
-    color:color(teal)
+.text-app-teal {
+  color: color(teal);
 }
-.text-app-lightteal{
-    color: color(altTeal);
+.text-app-lightteal {
+  color: color(altTeal);
 }
-.text-app-grey{
+.text-app-grey {
   color: color(text-grey);
 }
-.text-app-green{
+.text-app-green {
   color: color(bg-green);
 }
-.text-app-black{
+.text-app-black {
   color: color(text-black);
 }
-.text-app-grey{
+.text-app-grey {
   color: color(text-dark) !important;
   letter-spacing: -0.500211px;
 }
-.open-talk-nav{
-  background: #005F58 !important;
+.open-talk-nav {
+  background: #005f58 !important;
 }
-.intenship-nav{
-  background: #6B5ACC !important;
+.intenship-nav {
+  background: #6b5acc !important;
 }
-.contact-nav{
+.contact-nav {
   background: color(primary) !important;
 }
-.about-nav{
+.about-nav {
   background: color(primary) !important;
 }
-mat-dialog-container{
-  background: rgba(0,0,0,.7) !important;
+mat-dialog-container {
+  background: rgba(0, 0, 0, 0.7) !important;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
 }
-mat-dialog-content{
+mat-dialog-content {
   position: absolute;
   top: 5rem;
   bottom: 5rem;
@@ -117,162 +125,167 @@ mat-dialog-content{
   max-height: inherit !important;
 }
 //custom font sizes
-.f-12{
+.f-12 {
   font-size: 12px;
 }
-.f-10{
+.f-10 {
   font-size: 10px;
 }
-.f-12{
+.f-12 {
   font-size: 12px;
 }
-.f-15{
+.f-15 {
   font-size: 15px;
 }
-.f-14{
+.f-14 {
   font-size: 14px;
 }
-.f-18{
+.f-18 {
   font-size: 18px;
 }
-.f-20{
+.f-20 {
   font-size: 20px;
 }
-.f-24{
+.f-24 {
   font-size: 24px;
 }
-.f-34{
+.f-34 {
   font-size: 34px;
 }
-.f-30{
-    font-size: 30px;
+.f-30 {
+  font-size: 30px;
 }
-.f-40{
+.f-40 {
   font-size: 40px;
 }
-.f-44{
+.f-44 {
   font-size: 44px;
 }
-.f-64{
+.f-64 {
   font-size: 64px;
 }
-.f-48{
+.f-48 {
   font-size: 48px;
 }
-.f-40{
+.f-40 {
   font-size: 40px;
 }
-.f-44{
+.f-44 {
   font-size: 40px;
 }
 //custom font-weights
-.f-w3{
+.f-w3 {
   font-weight: normal;
 }
-.f-w300{
+.f-w300 {
   font-weight: 300;
 }
-.f-w6{
+.f-w6 {
   font-weight: 600;
 }
-.f-w5{
+.f-w5 {
   font-weight: 500;
 }
-.f-w4{
+.f-w4 {
   font-weight: 400;
 }
-.f-wb{
+.f-wb {
   font-weight: bold;
 }
-.c_p{
-    cursor: pointer;
+.c_p {
+  cursor: pointer;
 }
-.button{
-    box-shadow: none;
-    border: none;
+.button {
+  box-shadow: none;
+  border: none;
 }
-::placeholder{
-    color: color(text-grey) !important;
+::placeholder {
+  color: color(text-grey) !important;
 }
-.head-text{
-    font-family: Mermaid;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 66px;
-    line-height: 84px;
-    letter-spacing: -2.50105px;
+.head-text {
+  font-family: Mermaid;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 66px;
+  line-height: 84px;
+  letter-spacing: -2.50105px;
 }
-.title-text{
-    font-family: Mermaid;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 70px;
-    letter-spacing: -1.87579px;
+.title-text {
+  font-family: Mermaid;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 70px;
+  letter-spacing: -1.87579px;
 }
 //button styling
-.join{
-    border-radius: 5px;
-    padding: 0.45rem 1rem;
+.join {
+  border-radius: 5px;
+  padding: 0.45rem 1rem;
 }
 //formatting inpit outlines
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline: none !important;
-    outline-width: 0;
+  outline: none !important;
+  outline-width: 0;
 }
-.section_content{
-    padding: 3rem 15%;
+.section_content {
+  padding: 3rem 15%;
 }
-.banner_text{
-  animation-iteration-count: 1; 
-  animation-fill-mode: forwards; 
+.banner_text {
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   transform: translateX(-150%);
   transition: transform 1.5s ease-in-out;
 }
-@keyframes fadeInText { 
-  0% { 
-      opacity: 0; 
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
   }
-  25% { 
-      opacity: 0.25; 
-  } 
-  50% { 
-    opacity: 0.5; 
+  25% {
+    opacity: 0.25;
   }
-  75% { 
-    opacity: 0.75; 
-  } 
-  100% { 
-      opacity: 1; 
-  } 
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.motion_in{
+.motion_in {
   transform: translateX(0);
 }
 @media (max-width: 768px) {
-    .section_content{
-        padding: 3rem 7%;
-    }
+  .section_content {
+    padding: 3rem 7%;
+  }
+
+  .mt_t {
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
 }
 @media (max-width: 599px) {
-    .section_content{
-        padding: 3rem 5%;
-    }
+  .section_content {
+    padding: 3rem 5%;
+  }
 }
 @media (max-width: 987px) {
-    .head-text{
-        font-size: 50px;
-    }
-    .title-text{
-        font-size: 35px;
-    }
+  .head-text {
+    font-size: 50px;
+  }
+  .title-text {
+    font-size: 35px;
+  }
 }
 @media screen and (min-width: 1400px) {
-  .page_banner{
-      background-size: cover;
-      margin-bottom: 1.5rem;
+  .page_banner {
+    background-size: cover;
+    margin-bottom: 1.5rem;
   }
 }
