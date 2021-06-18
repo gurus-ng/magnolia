@@ -7,12 +7,25 @@
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-body">
-        <img src="../assets/img/banner-image.png" class="card-img" alt="" />
+      <div class="modal-body bg-primary">
+        <img
+          src="../assets/img/banner-image.png"
+          class="card-img h-100"
+          alt=""
+        />
         <div class="card-img-overlay bg-dark">
           <div class="container pb-4">
+            <div class="d-flex justify-content-end">
+              <button
+                type="button"
+                class="btn text-white join"
+                data-bs-dismiss="modal"
+              >
+                X
+              </button>
+            </div>
             <h6 class="title-text text-white mb-4 text-center">
               Who is a community member?
             </h6>
@@ -26,9 +39,10 @@
             </p>
             <p class="text-app-grey text-white f-15">• Planning/Organization</p>
             <p class="text-app-grey text-white f-15">• Mentorship</p>
+            <p class="text-app-grey text-white f-15">• Facilitation</p>
+            <p class="text-app-grey text-white f-15">• Other ways of helping</p>
             <p class="text-app-grey text-white f-15 mt-4">
-              Other ways of helping Become a community member today by signing
-              up
+              Become a community member today by signing up
             </p>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSfhvLq9lQqTHI5pgEmD4cEUTDQ_SmIFHCm9RRm-0m3NN68wSw/viewform?usp=sf_link"
@@ -42,16 +56,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="modal-footer bg-dark sm">
-        <button
-          type="button"
-          class="nav-link bg-app-teal join"
-          data-bs-dismiss="modal"
-        >
-          Close
-        </button>
-      </div> -->
     </div>
   </div>
 </div>
